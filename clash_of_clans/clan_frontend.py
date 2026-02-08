@@ -14,8 +14,8 @@ import clan_backend
 st.title("Clash of Clans Clan Info")
 
 # Get the user input
-clan_tag = st.text_input("Enter a clan tag:")
-clan_tag2 = st.text_input("Enter a second clan tag:")
+clan_tag = st.text_input("Enter a clan tag: (ex: #QYQUVRLV)")
+clan_tag2 = st.text_input("Enter a second clan tag: (ex: #2VP2UG2R)")
 
 # Only call backend if the user entered something
 if clan_tag:
