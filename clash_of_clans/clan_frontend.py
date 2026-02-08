@@ -11,7 +11,7 @@ import requests
 import clan_backend
 
 
-st.title("Clash of Clans Clan Info")
+st.title("⚔️Clash of Clans: Clan War Simulator⚔️ ")
 
 # Get the user input
 clan_tag = st.text_input("Enter a clan tag: (ex: #QYQUVRLV)")
