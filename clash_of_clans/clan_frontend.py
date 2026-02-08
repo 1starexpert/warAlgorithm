@@ -54,7 +54,7 @@ def warAlgorithm():
             st.write(clan_info[0][0] + " is heavily expected to win because they have a winstreak that is MUCH higher.")
             st.image(clan_info[1])
             return
-        if (clan2 - clan1) > 10: 
+        if (clan2 - clan1) >= 10: 
             st.title("Winner: " + clan_info2[0][0])
             st.write(clan_info2[0][0] + " is heavily expected to win because they have a winstreak that is MUCH higher.")
             st.image(clan_info2[1])
