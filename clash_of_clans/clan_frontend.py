@@ -49,7 +49,7 @@ def warAlgorithm():
         if (clan1 == clan2):
             st.title("Winner: Tie. It is pretty close. Both clans are around the same level.")
             return
-        if (clan1 - clan2) > 10: 
+        if (clan1 - clan2) >= 10: 
             st.title("Winner: " + clan_info[0][0])
             st.write(clan_info[0][0] + " is heavily expected to win because they have a winstreak that is MUCH higher.")
             st.image(clan_info[1])
