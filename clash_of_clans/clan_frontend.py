@@ -26,7 +26,7 @@ if clan_tag:
             #st.write(line)
         st.write(clan_info[0][:10])
     except:
-        st.write("Missing Clan Information. Try a different clan without missing info.")
+        st.write("Tag error. Check clan tag and try again or try again with a different tag.")
 if clan_tag2:
     try:
         clan_info2 = clan_backend.displayClanInformation(clan_tag2)
@@ -35,7 +35,7 @@ if clan_tag2:
             #st.write(line)
         st.write(clan_info2[0][:10])
     except:
-        st.write("This clan has missing information. Please try a different clan.")
+        st.write("Tag error. Check clan tag and try again or try again with a different tag.")
 #war win algorithm here: 
 def warAlgorithm():
     
