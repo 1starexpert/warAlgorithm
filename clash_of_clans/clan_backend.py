@@ -24,7 +24,7 @@ def displayClanLeaders():
         lb = []
         name = cd[i]["name"]
         tag = cd[i]["tag"]
-        st.image(cd[i]["badgeURLs"]["small"])
+        st.image(cd[i]["badgeUrls"]["small"])
         st.write("Clan Name: " + name + " Clan Tag: " + tag)
     #name = cd[0]["name"]
     #tag = cd[0]["tag"]
