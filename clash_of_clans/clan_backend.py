@@ -24,8 +24,8 @@ def displayClanLeaders():
         lb = []
         name = cd[i]["name"]
         tag = cd[i]["tag"]
-        st.sidebar(st.image(cd[i]["badgeUrls"]["small"]))
-        st.sidebar(st.write("Clan Name: " + name + " Clan Tag: " + tag))
+        st.sidebar.image(cd[i]["badgeUrls"]["small"])
+        st.sidebar.write("Clan Name: " + name + " Clan Tag: " + tag)
 displayClanLeaders()
     #name = cd[0]["name"]
     #tag = cd[0]["tag"]
