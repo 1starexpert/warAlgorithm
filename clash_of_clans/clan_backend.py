@@ -22,7 +22,7 @@ def displayClanLeaders():
     cd = clan_dict["items"]
     col1, col2, col3 = st.sidebar.columns([.5,6,.5])
     with col2:
-        st.markdown("# 🏆US LeaderBoards🏆") 
+        st.markdown("# US LeaderBoards🏆") 
     
     """
     for i in range(10):
