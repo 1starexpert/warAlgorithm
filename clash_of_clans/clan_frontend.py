@@ -8,7 +8,6 @@ print("Backend imported successfully!")
 import requests
 
 
-import clan_backend
 
 st.sidebar.title("US Leaderboards")
 #clan_backend.displayClanLeaders()
