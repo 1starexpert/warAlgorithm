@@ -29,7 +29,7 @@ def displayClanLeaders():
         st.sidebar.write(rank + ". Clan Name: " + name + " Clan Tag: " + tag)
         st.sidebar.write(" ")
         st.sidebar.write(" ")
-displayClanLeaders()
+#displayClanLeaders()
     #name = cd[0]["name"]
     #tag = cd[0]["tag"]
 
