@@ -11,7 +11,7 @@ import requests
 import clan_backend
 
 st.sidebar.title("US Leaderboards")
-st.sidebar(clan_backend.displayClanLeaders())
+displayClanLeaders()
 
 st.title("⚔️Clash of Clans: Clan War Simulator⚔️ ")
 
