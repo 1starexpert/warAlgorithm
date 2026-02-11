@@ -20,7 +20,9 @@ def displayClanLeaders():
     clan_dict = response.json()
     #pprint(clan_dict["items"][0])
     cd = clan_dict["items"]
-    st.sidebar.title("US Leaderboards:")
+    col1, col2, col3 = st.sidebar.columns([1,2,1])
+    with col2:
+        st.markdown.title("US Leaderboards:")
     
     """
     for i in range(10):
