@@ -19,13 +19,15 @@ def displayClanLeaders():
     clan_dict = response.json()
     #pprint(clan_dict["items"][0])
     cd = clan_dict["items"]
-
+    st.sidebar.title("US Leaderboards:")
     for i in range(10):
         lb = []
         name = cd[i]["name"]
         tag = cd[i]["tag"]
         st.sidebar.image(cd[i]["badgeUrls"]["small"])
-        st.sidebar.write("Clan Name: " + name + " Clan Tag: " + tag)
+        st.sidebar.write((i + 1) + " Clan Name: " + name + " Clan Tag: " + tag)
+        st.sidebar.write(" ")
+        st.sidebar.write(" ")
 displayClanLeaders()
     #name = cd[0]["name"]
     #tag = cd[0]["tag"]
