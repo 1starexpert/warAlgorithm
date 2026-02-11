@@ -22,7 +22,7 @@ def displayClanLeaders():
     cd = clan_dict["items"]
     st.sidebar.title("US Leaderboards:")
     
-
+    """
     for i in range(10):
         name = cd[i]["name"]
         tag = cd[i]["tag"]
@@ -35,7 +35,8 @@ def displayClanLeaders():
         st.sidebar.markdown(f"**{rank}. {safe_name}**")
         st.sidebar.markdown(f"Clan Tag: `{tag}`")
     st.sidebar.markdown("---")  # separator
-   """
+    """
+   
     for i in range(10):
         name = cd[i]["name"]
         tag = cd[i]["tag"]
@@ -49,7 +50,6 @@ def displayClanLeaders():
             st.markdown(f"Clan Tag: `{tag}`")
     
     st.sidebar.markdown("---")  # nice horizontal separator
-    """
     """
     st.sidebar.title("US Leaderboards:")
     for i in range(10):
