@@ -12,7 +12,7 @@ import re
 API_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjliYjE0MDVjLTMxY2MtNGY2MC1hOWY5LWViY2E3ODk2NzBhMyIsImlhdCI6MTc2NDYxODI3OSwic3ViIjoiZGV2ZWxvcGVyLzViMjBmYzM1LTEwOGEtNDM1YS0yNmMwLTQ4Njk2OTA4MDQyOCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjQ1Ljc5LjIxOC43OSJdLCJ0eXBlIjoiY2xpZW50In1dfQ.C6EoL9aIDnsZ4ZYrPKKJvhoRkzrKan8HB6W7KMkFxyJHnjp1Ryj2Evo3J3DdfKb8hLiZWoaHILErNg-w1jg1tQ"
 
 def displayClanLeaders():
-    url = f"https://cocproxy.royaleapi.dev/v1/locations/32000009/rankings/clans?limit=10"
+    url = f"https://cocproxy.royaleapi.dev/v1/locations/32000185/rankings/clans?limit=10"
     headers = {
         "Authorization": f"Bearer {API_TOKEN}"
     }
