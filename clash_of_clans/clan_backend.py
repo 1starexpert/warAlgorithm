@@ -20,6 +20,22 @@ def displayClanLeaders():
     #pprint(clan_dict["items"][0])
     cd = clan_dict["items"]
     st.sidebar.title("US Leaderboards:")
+
+    for i in range(10):
+        name = cd[i]["name"]
+        tag = cd[i]["tag"]
+        rank = str(i + 1)
+    
+    # center the image with columns
+        col1, col2, col3 = st.sidebar.columns([1,2,1])
+        with col2:
+            st.image(cd[i]["badgeUrls"]["small"], width=60)
+            st.markdown(f"**{rank}. {name}**  ")
+            st.markdown(f"Clan Tag: `{tag}`")
+    
+    st.sidebar.markdown("---")  # nice horizontal separator
+    """
+    st.sidebar.title("US Leaderboards:")
     for i in range(10):
         lb = []
         name = cd[i]["name"]
@@ -30,6 +46,7 @@ def displayClanLeaders():
         st.sidebar.write("Clan Tag: " + tag)
         st.sidebar.write(" ")
         st.sidebar.write(" ")
+    """
 #displayClanLeaders()
     #name = cd[0]["name"]
     #tag = cd[0]["tag"]
