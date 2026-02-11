@@ -5,6 +5,7 @@ import requests
 
 from pprint import pprint
 import streamlit as st
+import re
 
 #API_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjI3ODI2ZGM5LWM3M2EtNGZmOS04NzEzLTQ0Nzc0M2ZhZjBmMyIsImlhdCI6MTc2NDYwNTAwNSwic3ViIjoiZGV2ZWxvcGVyLzViMjBmYzM1LTEwOGEtNDM1YS0yNmMwLTQ4Njk2OTA4MDQyOCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjE0OS4xMDIuMjQyLjkxIl0sInR5cGUiOiJjbGllbnQifV19.OcbKnvwVw7lbPmkPMsl0kHS1Z88_mN3rstpAfm0LURK8DU38AihsPXjkhpsZLoxAN7VkhHaD_rKlvSpNnfIeGw"
 #API_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjdkYzEwOTliLTIwN2EtNDNkOC05OTMzLWQzMmJiYzllYWFiMiIsImlhdCI6MTc2NDYxNzcxOSwic3ViIjoiZGV2ZWxvcGVyLzViMjBmYzM1LTEwOGEtNDM1YS0yNmMwLTQ4Njk2OTA4MDQyOCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjE0OS4xMDIuMjQyLjkwIl0sInR5cGUiOiJjbGllbnQifV19.LG-PxSC9JYBUMNK1NGNaHHd2Re9N_862sWSF_cB4Q8jZzpyD9cp2WLtJJrhPNOt9tgcRveysAUC-qYJm_i0KMA"
@@ -20,7 +21,21 @@ def displayClanLeaders():
     #pprint(clan_dict["items"][0])
     cd = clan_dict["items"]
     st.sidebar.title("US Leaderboards:")
+    
 
+    for i in range(10):
+        name = cd[i]["name"]
+        tag = cd[i]["tag"]
+        rank = str(i + 1)
+
+        # Escape Markdown special characters in the name
+        safe_name = re.sub(r"([*_`])", r"\\\1", name)
+
+        st.sidebar.image(cd[i]["badgeUrls"]["small"], width=60)
+        st.sidebar.markdown(f"**{rank}. {safe_name}**")
+        st.sidebar.markdown(f"Clan Tag: `{tag}`")
+    st.sidebar.markdown("---")  # separator
+   """
     for i in range(10):
         name = cd[i]["name"]
         tag = cd[i]["tag"]
@@ -34,6 +49,7 @@ def displayClanLeaders():
             st.markdown(f"Clan Tag: `{tag}`")
     
     st.sidebar.markdown("---")  # nice horizontal separator
+    """
     """
     st.sidebar.title("US Leaderboards:")
     for i in range(10):
